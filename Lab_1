@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title> Introducción a las aplicaciones web, HTML5 y ciclo de vida de
+       los sistemas de información</title>
+  </head>
+
+  <body>
+    <header>
+      <h1> Laboratorio 1: Introducción </h1>
+      <br/>
+      <h2> DIEGO RAMIREZ </h2>
+      <h3> A01208302 </h3>
+      <address> diego_rz2@hotmail.com </address>
+    </header>
+
+    <br/>
+
+    <section>
+      <figure>
+        <img src="lafoto.jpeg" alt="Me" width="360" height="340" >
+        <figcaption>
+          <p> Soy yo, acompañado de mis amigos en nuestra graduación de
+            preparatoria </p>
+          <p> (David, Sofia, Diego, Scarlett, Kassel, Carlos)
+        </figcaption>
+      </figure>
+      <article>
+        <header>
+          <h3> About </h3>
+        </header>
+        <form>
+          <p> Me llamo Diego Ramírez, soy alumno de 5to semestre
+            de la carrera de Sistemas Digitales en ITESM CQ. En mi tiempo
+             libre gusto de jugar videojuegos y de procrastinar viendo videos.
+              Soy apasionado del ilusionismo urbano y el universo de Halo.
+            Actualmente trato de mejorar mis habilidades de programación en el
+           lenguaje C para la programación de microcontroladores, así como
+         ampliar mis conocimientos en el área de Aplicaciones Web. </p>
+       </form>
+      </article>
+    </section>
+
+    <hr/>
+
+    <section>
+      <article>
+        <header>
+            <h3> Preguntas y Respuestas: </h3>
+        </header>
+        <dl>
+          <dt> 1. ¿Cuál es la diferencia entre Internet y la World Wide Web? </dt>
+          <dd> <i> Internet</i> es una red conformada por multiples redes más
+            pequeñas, como <i>WANS, MANS o LANS </i>, interconectadas a un mismo
+            eje; por otra parte, World Wide Web se define por Ramón Olivella en
+            su libro   </dd><br/>
+          <dt> 2. ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT,
+            PATCH, DELETE? </dt>
+          <dd></dd><br/>
+          <dt> 3. ¿Qué método HTTP se debe utilizar al enviar un formulario HTML,
+            por ejemplo cuando ingresas tu usuario y contraseña en algún sitio?
+            ¿Por qué? </dt>
+          <dd> <i> </i> </dd><br/>
+          <dt> 4. ¿Qué método HTTP se utiliza cuando a través de un navegador web
+            se accede a una página a través de un URL? </dt>
+          <dd> <i> </i> </dd><br/>
+          <dt> 5. Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué
+            significa esto? ¿Ocurrió algún error? </dt>
+          <dd> Si el protocolo regresa un 200 quiere decir que todo está
+             <i>bien</i> </dd><br/>
+          <dt> 6. ¿Es responsabilidad del desarrollador corregir un sitio web si un
+             usuario reporta que intentó acceder al sitio y se encontró con un
+             error 404? ¿Por qué? </dt>
+          <dd> No, es un error de Recurso no encontrado, debido a que el usuario
+            no está haciendo uso adecuado de la aplicación<i> </i> </dd><br/>
+          <dt> 7. ¿Es responsabilidad del desarrollador corregir un sitio web si un
+             usuario reporta que intentó acceder al sitio y se encontró con un
+             error 500? ¿Por qué? </dt>
+          <dd> Si, el error 500 es Internal Server Error<i> </i> </dd><br/>
+          <dt> 8. ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado
+             (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén
+              desaprobados. </dt>
+          <dd> <i> </i> </dd><br/>
+          <dt> 9. ¿Cuáles son las diferencias principales entre HTML 4 y HTML5? </dt>
+          <dd> HTML5 contiene HTML(contenido y estructura), CSS(presentación) y JavaScript(comportamiento)<i> </i> </dd><br/>
+          <dt> 10. ¿Qué componentes de estructura y estilo tiene una tabla? </dt>
+          <dd> <i> </i> </dd><br/>
+          <dt> 11. ¿Cuáles son los principales controles de una forma HTML5? </dt>
+          <dd> <i> </i> </dd><br/>
+          <dt> 12. ¿Qué tanto soporte HTML5 tiene el navegador que utilizas?
+            (Mozilla Firefox) </dt>
+          <dd> <i> </i> </dd><br/>
+          <br/><strong> Sobre el ciclo de vida y desarrollo de los sistemas de
+            información: </strong>
+          <dt> 13. ¿Cuál es el ciclo de vida de los sistemas de información? </dt>
+          <dd> <i> </i> </dd><br/>
+          <dt> 14. ¿Cuál es el ciclo de desarrollo de sistemas de información? </dt>
+          <dd> <i> </i> </dd><br/>
+        </dl>
+      </article>
+
+      <br/>
+      <hr/>
+      <br/>
+
+      <aside>
+        <table border="1", width="75%" >
+          <thead>
+            <h3><strong> Glosario de Terminos </strong></h3>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th> <i> Concepto </i> </th>
+              <th> <i> Definición </i> </th>
+            </tr>
+            <tr>
+              <th> URL </th>
+              <td></td>
+            </tr>
+            <tr>
+              <th> MIME </th>
+              <td></td>
+            </tr>
+            <tr>
+              <th> Métodos y Códigos de errores</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th> HTTP </th>
+              <td> <i>Hyperlink Text Transport Protocol</i>, protocolo utilizado
+                 para navegar en la www.</td>
+            </tr>
+            <tr>
+              <th> XML </th>
+              <td></td>
+            </tr>
+            <tr>
+              <th> XHTML </th>
+              <td></td>
+            </tr>
+            <tr>
+              <th> HTML5 </th>
+              <td></td>
+            </tr>
+            <tr>
+              <th> JS </th>
+              <td></td>
+            </tr>
+            <tr>
+              <th> php </th>
+              <td></td>
+            </tr>
+            <tr>
+              <th> jsp </th>
+              <td></td>
+            </tr>
+            <tr>
+              <th> Ajax </th>
+              <td></td>
+            </tr>
+
+            <tfoot>
+              <tr>
+                <th colspan="2"><strong>Referencias:</strong></th >
+              </tr>
+              <tr>
+                <th rowspan="3"> <i> Página web: </i> </th>
+                <td> insert link </td>
+              </tr>
+              <tr>
+                <td> insert link </td>
+              </tr>
+              <tr>
+                <td> insert link </td>
+              </tr>
+              <tr>
+                <th rowspan="3"> <i> Libro: </i> </th>
+                <td> insert book </td>
+              </tr>
+              <tr>
+                <td> insert book </td>
+              </tr>
+              <tr>
+                <td> insert book </td>
+              </tr>
+            </tfoot>
+
+
+          </tbody>
+
+        </table>
+      </aside>
+
+    </section>
+
+    <footer>
+      <br/>
+        <p> <i> Made in Mexico with Atom; </i> <strong> Download at:</strong> <dfn>https://atom.io</dfn> </p>
+    </footer>
+
+  </body>
+
+</html>
