@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
 
   <head>
     <meta charset="utf-8" />
@@ -9,17 +9,25 @@
   </head>
 
   <body>
+    <nav style="background-color: azure">
+        <A href="Inicio">INICIO</A> |
+        <A href="About">ABOUT</A> |
+        <A href="Preguntas">PREGUNTAS</A> |
+        <A href="Glosario">GLOSARIO</A>
+    </nav>  
+    <div style="background-color: lightskyblue">
     <header>
-      <h1> Laboratorio 1: Introducción </h1>
+        <A id="Inicio"><h1> Laboratorio 1: Introducción </h1></A>
       <br/>
       <h2> DIEGO RAMIREZ </h2>
       <h3> A01208302 </h3>
       <address> diego_rz2@hotmail.com </address>
     </header>
+      </div>
 
     <br/>
 
-    <section>
+    
       <figure>
         <img src="lafoto.jpeg" alt="Me" width="360" height="340" >
         <figcaption>
@@ -30,7 +38,7 @@
       </figure>
       <article>
         <header>
-          <h3> About </h3>
+            <A id="About"><h3> About </h3></A>
         </header>
         <form>
           <p> Me llamo Diego Ramírez, soy alumno de 5to semestre
@@ -42,77 +50,86 @@
          ampliar mis conocimientos en el área de Aplicaciones Web. </p>
        </form>
       </article>
-    </section>
+    
+    
 
     <hr/>
-
-    <section>
+      
       <article>
         <header>
-            <h3> Preguntas y Respuestas: </h3>
+            <A id="Preguntas"><h3> Preguntas y Respuestas: </h3></A>
         </header>
         <dl>
-          <dt> 1. ¿Cuál es la diferencia entre Internet y la World Wide Web? </dt>
-          <dd> <i> Internet</i> es una red conformada por multiples redes más
+          <dt> 1. ¿Cuál es la diferencia entre Internet y la World Wide Web?</dt>
+          <dd> <ul><li>Internet es una red conformada por multiples redes más
             pequeñas, como <i>WANS, MANS o LANS </i>, interconectadas a un mismo
             eje; por otra parte, World Wide Web se define por Ramón Olivella en
-            su libro   </dd><br/>
-          <dt> 2. ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT,
-            PATCH, DELETE? </dt>
-          <dd></dd><br/>
+              su libro <em>Diseño y Programación de Aplicaciones Web</em> como <cite> una infraestructura de la información para la física de altas energías</cite>, quiere decir, la estructura con la que se manejan los multiples datos en la Internet. </li></ul>  </dd>
+          <dt> 2. ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE? </dt>
+            <dd> <ul><li>GET - Solicita una representación de un recurso específico, solo recuperan datos.</li><li> HEAD - Pide una respuesta idéntica a GET, pero sin el cuerpo de respuesta.</li><li> POST - Envía una entidad a un recurso en específico, generalmente causa un cambio de estado en el servidor. </li><li>PUT - Reemplaza todas las representaciones actuales de un recurso de destino. </li><li>PATCH - Aplica modificaciones parciales en un recurso. </li><li> DELETE - Borra un recurso en específico. </li></ul></dd>
           <dt> 3. ¿Qué método HTTP se debe utilizar al enviar un formulario HTML,
             por ejemplo cuando ingresas tu usuario y contraseña en algún sitio?
             ¿Por qué? </dt>
-          <dd> <i> </i> </dd><br/>
+            <dd> <ul><li>Se utiliza el método <i> POST</i> para poder actualizar el servidor sin exponer la información del usuario.</li></ul> </dd>
           <dt> 4. ¿Qué método HTTP se utiliza cuando a través de un navegador web
             se accede a una página a través de un URL? </dt>
-          <dd> <i> </i> </dd><br/>
-          <dt> 5. Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué
-            significa esto? ¿Ocurrió algún error? </dt>
-          <dd> Si el protocolo regresa un 200 quiere decir que todo está
-             <i>bien</i> </dd><br/>
-          <dt> 6. ¿Es responsabilidad del desarrollador corregir un sitio web si un
-             usuario reporta que intentó acceder al sitio y se encontró con un
-             error 404? ¿Por qué? </dt>
-          <dd> No, es un error de Recurso no encontrado, debido a que el usuario
-            no está haciendo uso adecuado de la aplicación<i> </i> </dd><br/>
-          <dt> 7. ¿Es responsabilidad del desarrollador corregir un sitio web si un
-             usuario reporta que intentó acceder al sitio y se encontró con un
-             error 500? ¿Por qué? </dt>
-          <dd> Si, el error 500 es Internal Server Error<i> </i> </dd><br/>
-          <dt> 8. ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado
-             (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén
-              desaprobados. </dt>
-          <dd> <i> </i> </dd><br/>
+            <dd> <ul><li>Se utiliza el método <i> GET</i>. </li></ul> </dd>
+          <dt> 5. Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error? </dt>
+            <dd> <ul><li>No hay error, el protocolo HTTP regresa un 200 cuando todo está <i>OK</i> </li></ul> </dd>
+          <dt> 6. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué? </dt>
+            <dd> <ul><li>Puede ser, 404 es un error de Recurso no encontrado, y se ocasiona debido a que el usuario trata de acceder a un recurso temporalmente desabilitado, o inexistente. </li></ul> </dd>
+          <dt> 7. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué? </dt>
+            <dd> <ul><li>Si, el error 500 es Internal Server Error, normalmente avisa al administrador lo sucedido para prevenir que ocurra nuevamente </li></ul> </dd>
+          <dt> 8. ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados. </dt>
+            <dd> <ul><li><i> Depreciated</i> quiere decir que el tag, o atributo, aunque puede seguir siendo utilizado, ya no está disponible en HTML5 y se puede manejar mejor con CSS. Algunos ejemplos son: <strong> acronym, big, centered, frame, basefont, u</strong></li></ul> </dd>
           <dt> 9. ¿Cuáles son las diferencias principales entre HTML 4 y HTML5? </dt>
-          <dd> HTML5 contiene HTML(contenido y estructura), CSS(presentación) y JavaScript(comportamiento)<i> </i> </dd><br/>
+            <dd> <ul><li>HTML5 contiene HTML(contenido y estructura), CSS(presentación) y JavaScript(comportamiento), mientras que en HTML4 se realiza todo con HTML. </li></ul> </dd>
           <dt> 10. ¿Qué componentes de estructura y estilo tiene una tabla? </dt>
-          <dd> <i> </i> </dd><br/>
+            <dd> <ul><li>Parte de los componentes de estructura que se presentan en las tablas de HTML5 son padding, titulos alineados, celdas de multiples columnas, celdas de multiples filas; mientras algunos de estilo pueden ser bordes, definición, espaciado de los bordes, color de fondo, color de fila, entre otros. </li></ul> </dd>
           <dt> 11. ¿Cuáles son los principales controles de una forma HTML5? </dt>
-          <dd> <i> </i> </dd><br/>
+            <dd> <ul><li>Action, method, enctype, target, autocomplete, entre otros </li></ul> </dd>
           <dt> 12. ¿Qué tanto soporte HTML5 tiene el navegador que utilizas?
             (Mozilla Firefox) </dt>
-          <dd> <i> </i> </dd><br/>
+            <dd> <ul><li>En Mozilla Firefox, <i>HTML</i>tiene bastante soporte, aunque hay algunos elementos deshabilitados como datetime y week en las fechas. </li></ul> </dd>
+        </dl>
           <br/><strong> Sobre el ciclo de vida y desarrollo de los sistemas de
             información: </strong>
+        <dl>
           <dt> 13. ¿Cuál es el ciclo de vida de los sistemas de información? </dt>
-          <dd> <i> </i> </dd><br/>
+          <dd> <img src="ciclo-de-vida-de-un-sistema-de-informacion.webp" width="300" height="300" alt="Diagrama"> </dd>
           <dt> 14. ¿Cuál es el ciclo de desarrollo de sistemas de información? </dt>
-          <dd> <i> </i> </dd><br/>
-        </dl>
+          <dd>  <ol>
+              <li>Identificación de problemas.</li>
+              <li>Determinación de requerimientos de información.</li>
+              <li>Análisis de las necesidades del sistema.</li>
+              <li>Diseño del sistema recomendado.</li>
+              <li>Desarrollo y documentación del software.</li>
+              <li>Pruebas y mantenimietno del sistema.</li>
+              <li>Evaluación del sistema.</li>
+              </ol></dd>
+          </dl>
+        
+          <br/><strong> Referencias: </strong><br/>
+          <p>https://developer.mozilla.org/es/docs/Web/HTTP/Methods</p>
+          <p>https://developer.mozilla.org/es/docs/Web/HTTP/Status/404</p>
+          <p>https://developer.mozilla.org/es/docs/Web/HTTP/Status/200</p>
+          <p>https://developer.mozilla.org/es/docs/Web/HTTP/Status/500</p>
+          <p>https://www.tutorialspoint.com/html5/html5_deprecated_tags.htm</p>
+          <p>https://www.w3schools.com/html/html_tables.asp</p>
+          <p>https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5</p>
+          <p>https://www.gestiopolis.com/ciclo-de-vida-de-un-sistema-de-informacion/</p>
+          <p>https://www.mindmeister.com/es/400833006/el-ciclo-de-desarrollo-de-los-sistemas</p>
+          <p>Olvera, Ramón. <em>Diseño y Programación de Aplicaciones Web.</em> p 42. 2002.</p>
       </article>
 
       <br/>
       <hr/>
       <br/>
-
-      <aside>
-        <table border="1", width="75%" >
-          <thead>
-            <h3><strong> Glosario de Terminos </strong></h3>
-          </thead>
-
-          <tbody>
+      
+      <A id="Glosario"> <h3>Glosario de Terminos</h3></A>
+        <table border="1" style="background-color: azure">
+          
+            <tbody>
             <tr>
               <th> <i> Concepto </i> </th>
               <th> <i> Definición </i> </th>
@@ -131,12 +148,12 @@
             </tr>
             <tr>
               <th> HTTP </th>
-              <td> <i>Hyperlink Text Transport Protocol</i>, protocolo utilizado
+              <td> <em>Hyperlink Text Transport Protocol</em>.Protocolo utilizado
                  para navegar en la www.</td>
             </tr>
             <tr>
               <th> XML </th>
-              <td></td>
+              <td><em>eXtended Mark-Uplanguage</em>. Lenguaje que permite asignar significado a datos para facilitar un dialogo entre aplicaciones. Se basa en separar la estructura de un documento en su contenido.</td>
             </tr>
             <tr>
               <th> XHTML </th>
@@ -162,6 +179,7 @@
               <th> Ajax </th>
               <td></td>
             </tr>
+            </tbody>
 
             <tfoot>
               <tr>
@@ -179,7 +197,7 @@
               </tr>
               <tr>
                 <th rowspan="3"> <i> Libro: </i> </th>
-                <td> insert book </td>
+                <td> Olvera, Ramón. <em>Diseño y Programación de Aplicaciones Web.</em> p 42. 2002. </td>
               </tr>
               <tr>
                 <td> insert book </td>
@@ -188,18 +206,13 @@
                 <td> insert book </td>
               </tr>
             </tfoot>
-
-
-          </tbody>
+            
 
         </table>
-      </aside>
-
-    </section>
 
     <footer>
       <br/>
-        <p> <i> Made in Mexico with Atom; </i> <strong> Download at:</strong> <dfn>https://atom.io</dfn> </p>
+        <p> <i> Made in Mexico with Brackets; </i> <strong> Download at:</strong> <dfn>https://brackets.io</dfn> </p>
     </footer>
 
   </body>
