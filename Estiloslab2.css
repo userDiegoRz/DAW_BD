@@ -1,0 +1,14 @@
+body{
+    font-family: sans-serif;
+} 
+
+.topic {
+    font-size: large;
+    align-content: center;
+}
+
+.separate {
+    background-color: #AA55FF;
+    text-align: center;
+    background-size: auto;
+}
