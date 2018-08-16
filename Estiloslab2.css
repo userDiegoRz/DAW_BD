@@ -1,14 +1,15 @@
+.inicio {
+    text-align: right;
+    font-size: small;
+    background-image: url(LOGO.png)
+    
+}
 body{
     font-family: sans-serif;
 } 
 
-.topic {
-    font-size: large;
-    align-content: center;
-}
-
 .separate {
-    background-color: #AA55FF;
+    background-color: #00AAFF;
     text-align: center;
-    background-size: auto;
+    
 }
