@@ -1,7 +1,12 @@
 .inicio {
     text-align: right;
     font-size: small;
-    background-image: url(LOGO.png)
+    background-image: url(LOGO.png);
+    background-position: left;
+    background-size: cover;
+    margin-left: 10px;
+    width: 400px;
+    height: 100px;
     
 }
 body{
