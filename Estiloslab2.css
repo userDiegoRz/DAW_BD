@@ -1,20 +1,55 @@
-.inicio {
+figcaption{
+    display: none;
+    background-color: lightgray;
+    border-bottom: 5px solid #00AAFF;
+    padding: 20px;
+}
+figure{
+    margin-right: 480px;    
+}
+figure:hover figcaption{
+    display: block;
+}
+header h3 {
     text-align: right;
     font-size: small;
+}
+header h2 {
+    float: right;    
+    text-align: right;
+    font-size: small;    
+}
+header h1 {
+    background-color: #00AAFF;
+    text-align: center; 
+}
+header div {
+    float: left;
+}
+body{
+    font-family: sans-serif;
+} 
+body header {
+    font-size: large;
+}
+nav {
+    padding: 10px;
+}
+nav A:hover{
+    color: #B30000;
+    
+}
+.logo{
     background-image: url(LOGO.png);
     background-position: left;
     background-size: cover;
     margin-left: 10px;
     width: 400px;
     height: 100px;
-    
 }
-body{
-    font-family: sans-serif;
-} 
 
-.separate {
-    background-color: #00AAFF;
-    text-align: center;
+.description {
+    text-align: left;
+    float: left;
     
 }
