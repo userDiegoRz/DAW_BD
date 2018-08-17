@@ -5,7 +5,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="Estiloslab2.css"/>
+    <link rel="stylesheet" href="ministyles.css"/>
     <title> Introducción a las aplicaciones web, HTML5 y ciclo de vida de
        los sistemas de información</title>
   </head>
@@ -62,7 +62,7 @@
       
       <article>
         <h2>
-            <A id="HTML"> Preguntas y Respuestas: </A>
+            <A id="HTML"> Preguntas y Respuestas HTML: </A>
         </h2>
         <dl>
           <dt> 1. ¿Cuál es la diferencia entre Internet y la World Wide Web?</dt>
@@ -135,13 +135,39 @@
       <hr/>
       <br/>
       
+      <article>
+          <h2><A id="CSS">Preguntas y Respuestas CSS:</A> </h2>
+        <ol>
+            <li>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de <em>!important</em> en un CSS?</li>
+            <dd><p>Tomar en cuenta si es necesario incluirlo o no, dado que por un malo uso de !important se puede asignar un estilo a un elemento en el que no se desea, y ocasionar errores muy sutiles.</p></dd>
+            <li>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</li>
+            <dd><p>Depediendo de la imagen selecionada, al momento de cambiar el tamaño de una ventana, se puede perder calidad o inclusive el formato de la misma puede no desplegarse dependiendo del navegador. Por eso es importante seleccionar una iagen que cumpla con el objetivo deseado. </p></dd>
+            <li>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</li>
+            <dd><p><em>%</em> Es la medida más confiable a utilizar cuando queremos que la página se pueda adaptar al tamaño de la ventana. en cambio <em>pt</em> y <em>px</em> son fijas, y a no ser que se esté 100% seguro del tamaño, es mejor usar medidas adaptables.</p></dd>
+            <li>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</li>
+            <dd><p>Debido a que optimiza los tiempos de carga de la página</p></dd>
+          </ol>
+         
+          <br/><strong>Referencias:</strong><br/>
+          <p>https://desarrolloweb.com/articulos/declaracion-important-css.html</p>
+          <p>http://librosweb.es/referencia/css/background-image.html</p>
+          <p>https://franciscoamk.com/unidades-de-medida-en-css/</p>
+          <p>http://www.4rsoluciones.com/blog/minificar-codigo-una-tecnica-sencilla-para-hacer-mas-liviano-nuestro-sitio-web/</p>
+          
+          
+      </article>
+      
+      <br/>
+      <hr/>
+      <br/>
+      
       <A id="Glosario"> <h3>Glosario de Terminos</h3></A>
-        <table border="1" style="background-color: azure">
+        <table border="1">
           
             <tbody>
             <tr>
-              <th> <em> Concepto </em> </th>
-              <th> <em> Definición </em> </th>
+              <th class="selected"> <em> Concepto </em> </th>
+              <th class="selected"> <em> Definición </em> </th>
             </tr>
             <tr>
               <th> URL </th>
@@ -235,7 +261,7 @@
       <br/>
     <footer>
       <br/>
-        <p> <em> Made in Text editor Brackets; </em> <strong> Download at:</strong> <dfn>https://brackets.io</dfn> </p>
+        <p> <em> Made in Text editor Brackets; </em> <strong> Download at:</strong> <a href="https://brackets.io">https://brackets.io</a></p>
     </footer>
 
   </body>
