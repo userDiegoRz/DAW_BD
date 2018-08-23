@@ -29,6 +29,23 @@ hr{
     margin-right: 10%;
 }
 
+
+img{
+    border-radius: 12px;
+}
+
+body{
+    padding: 1%;
+    border: 2%;
+    font-family: sans-serif;
+    background-color: #feefd0;
+} 
+body header {
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: large;
+}
+
 nav {
     padding: 1%;
     margin-left: 20%;
@@ -64,19 +81,7 @@ figcaption{
     background-color: #B3CCCC;
     align-self: center;
 }
-img{
-    border-radius: 12px;
-}
-
-body{
-    padding: 1%;
-    border: 2%;
-    font-family: sans-serif;
-} 
-body header {
-    font-size: large;
-}
-
+S
 strong {
     color: #B30000;
 }

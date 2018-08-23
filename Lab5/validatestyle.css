@@ -1,0 +1,47 @@
+header div{
+    margin-left: 1%;
+    background-image: url(Logo_COD.jpeg);
+    background-position: left;
+    background-size: cover;
+    width: 400px;
+    height: 100px;
+    float: left;
+}
+header h1 {
+    padding: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-bottom: 5px solid #000000;
+    border-radius: 15px;
+    background-color: #0cc0dd;
+    text-align: center; 
+}
+header h3 {
+    padding-right: 2%;
+    text-align: right;
+    font-size: small;
+}
+
+hr{
+    border-bottom-width: medium;
+    border-bottom-color: #000000;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+img{
+    border-radius: 12px;
+}
+
+body{
+    padding: 1%;
+    border: 2%;
+    font-family: sans-serif;
+    background-color: #feefd0;
+} 
+body header {
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: large;
+}
