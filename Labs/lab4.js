@@ -74,12 +74,12 @@ function counter(){
     let zer = 0;
     let n = array.length;
     
-    for (n; n>=0; n--) {
-        if (array.charAt(n)<0)
+    for (let i=0; i<n; i++) {
+        if (array.charAt(i)<0)
             neg++;
-        if (array.charAt(n)>0)
+        if (array.charAt(i)>0)
             pos++;
-        if (array.charAt(n)==0)
+        if (array.charAt(i)==0)
             zer++;
     }
     
@@ -116,41 +116,65 @@ function getInverted (){
     w.document.close();
 }
 
-function averageMatrix (){
-    let matrix = generateMatrix();
-    
-    let avrg = 0;
-    let n = matrix.length;
-    let divi = n;
-    let m = matrix.width;
-    
-    for (m; m>=0; m--) {
-        avrg = avrg + matrix.charAt(n);  
-        n--;
-    }
-}
-
 function generateMatrix(){
-    var mat = "";
-    let fil = Number(Math.floor((Math.random() * 10) + 1));
-    let row = Number(Math.floor((Math.random() * 10) + 1));;
-    let n = 0;
+    var arr = [];
+    var aux = "";
+    let col = 6;
+    let row = prompt("Escribe las filas para una tabla de 6 columnas");
+    
     
     for (let i=0; i<row; i++) {
-        for (let j=0; j<fil; j++) {
-            n = Math.floor(Math.random() * 20-10);
-            mat = mat + n;
+        arr[i] = new Array();
+        for (let j=0; j<col; j++) {
+            arr[i][j] = Math.floor(Math.random() * 20);
+            aux = aux + arr [i][j];
         }
-    }
+        aux = aux + '<br/>';
+    } 
+    console.log(arr);
     
-    console.log(mat);
-    return mat;
+    let mat = "";
+    let n = 0;
+    
+    mat = aux;
+    
+    for(i=0; i<row; i++){
+        for(j=0; j<col; j++){
+            n = n + arr[i][j];
+        }
+        n=n/j;
+
+        mat = mat + '<br/>' + "El promedio de la Fila " + i + "es: " + n + '<br/>';
+        n=0;
+    }
+    var w = window.open("", "_blank", "width=300, height=200, rezisable=no, left=800, top=400");
+    w.document.open();
+    w.document.write(mat);
+    w.document.close();
+}
+
+function invertBinary(){
+    alert("Dato curioso #58");
+    alert("Anteriormente, los sistemas operativos de Macintosh y Windows no eran compatibles. Una de las principales razones era que los mensajes entre ellos no se podían interpretar.");
+    alert("Hablando a nivel bit, al momento de comunicar un mensaje, ambos Sistemas contaban con un bit start, uno o dos bit stop, y un bit de pariedad, además de los 8 bits (1 byte) de mensaje.");
+    alert("Sin embargo, el problema radicaba en el ordenamiento de los bits. En los sistemas Macintosh, el bit más significativo se encontraba a la derecha y el menos significativo a la izquierda");
+    alert("Para los sistemas de Windows, el bit más significativo se encuentra a la izquierda de la cadena, y el menos significativo a la derecha");
+    alert("Por lo que si tu desearas enviar una cadena con un bit start, un bit stop, 1 byte de mensaje sin pariedad [Total 10 bits]")
+    let n = prompt("Introduce una cadena binaria de 10 bits", "1001110101");
+    
+    var x = setInverted(n);
+    
+    var w = window.open("", "_blank", "width=300, height=200, rezisable=no, left=800, top=400");
+    w.document.open();
+    w.document.write("Una cadena " + n + " de un sistema se leería como " + x + " En el otro" + '<br/>' + '<br/>' + "   Fascinante...");
+    w.document.close();
+    
 }
 
 
 document.getElementById("one").onclick = powers;
 document.getElementById("two").onclick = mentalMath;
 document.getElementById("three").onclick = counter;
-document.getElementById("four").onclick = averageMatrix;
+document.getElementById("four").onclick = generateMatrix;
 document.getElementById("five").onclick = getInverted;
-document.getElementById("free").onclick = powers;
+document.getElementById("free").onclick = invertBinary;
