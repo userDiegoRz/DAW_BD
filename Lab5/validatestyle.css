@@ -45,3 +45,23 @@ body header {
     border-radius: 5px;
     font-size: large;
 }
+
+nav {
+    padding: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    border-radius: 12px;
+    border-left: 5px solid #0cc0dd;
+    border-right: 5px solid #ff77ff;
+    background-color: #000000;
+    text-align: center;
+    font-size: large;
+}
+nav a,em {
+    color: #ffffff;
+}
+nav a:hover{
+    color: #0cc0dd;
+}
