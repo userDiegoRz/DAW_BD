@@ -3,6 +3,7 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
+
     ev.dataTransfer.setData("text", ev.target.id);
 }
 
@@ -13,7 +14,7 @@ function drop(ev) {
 }
 
 function alertActivity() {
-   // setInterval(function(){ alert("Remember to try the activity!"); }, 30000);
+   setInterval(function(){ alert("Remember to try the activity!"); }, 5000);
 }
 
 function setStyleText(){
@@ -34,8 +35,14 @@ function hideElement (){
     document.getElementById("info").style.visibility = 'hidden';
 }
 
+function reset (){
+    location.reload(false);
+}
+
 document.getElementById("index").onload = alertActivity;
 document.getElementById("actname").onmouseover = setStyleText;
 document.getElementById("actname").onmouseout = removeStyleText;
 document.getElementById("actinstructions").onmouseover = showElement;
 document.getElementById("actinstructions").onmouseout = hideElement;
+
+document.getElementById("enter").onclick = reset;

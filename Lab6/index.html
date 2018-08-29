@@ -13,12 +13,11 @@
         <div class="fixed">
             <a href="https://giphy.com/gifs/5VKbvrjxpVJCM/fullscreen">by @userDiegoRz</a>
         </div>
-        <div class="watermark">
-        </div>
+        <div class="watermark"></div>
         <div>
             <header>
                 <a id="titulo"><h1>Dynamic Documents</h1></a>
-                <div id="logo"><link href="index.html"></div>
+                <div id="logo" alt="LOGO ITESM"><link href="index.html"></div>
                 <h3>Diego Ramírez Ramírez</h3>
                 <h3>A01208302</h3>
                 <h3>+52 1 (461) 169 8936</h3>
@@ -27,23 +26,20 @@
             </header>
         </div>
         <hr/>
-        <nav>
-            <em> |#| </em>
-            <a href="index.html">Landing</a>
-            <em> |#| </em>
-        </nav>
         <article>
             <h2>Preguntas JavaScript</h2>
                 <ul>
-                    <dt>¿Cuáles son las diferencias entre los posibles valores de la propiedad <i>position?</i></dt>
-                    <dd><p></p></dd>
+                    <dt>¿Cuáles son las diferencias entre los posibles valores de la propiedad <i>position</i>?</dt>
+                    <dd><ol><li><em>Static.</em> EL elemento aparece según su orden en el documento.</li><li><em>Absolute.</em> Se genera el elemento relativo a la primera posición de su ancestro</li><li><em>Fixed.</em> Se genera el elemento relativo a la vetana de navegación</li><li><em>Relative.</em> Se genera el elemento relativo a su posición normal, agregando pt o px hacia alguna dirección</li><li><em>Sticky.</em> Se coloca al elemento basado en el scroll del usuario, varía entre <em>fixed</em> y <em>relative</em>. </li><li><em>Initial.</em> Regresa la propiedad a su valor inicial.</li><li><em>Inherit.</em> Hereda la propiedad de su elemento padre.</li></ol></dd>
+                    <br/>
                     <dt>¿Cuále son los valores estándar para la propiedad <i>visibility</i>?</dt>
-                    <dd><p></p></dd>
+                    <dd><p><em>Visible</em>, <em>hidden</em>, y <em>collapse</em>. El primero es el valor default, y el elemento se ve al cargar la págin. Con el segundo, el elemento no se ve pero su espacio sigue estando en el dislay del documento. Por último, se usa para remover parte tablas o columnas, o para sustituir como alterno a <em>hidden</em>.</p></dd>
                     <dt>¿Qué es el <i>zIndex</i> y para qué sirve?</dt>
-                    <dd><p></p></dd>
+                    <dd><p>Es un índice que especifica el orden de pila de un elemento. En otras palabras, determina que elemento está más al frente, y cual se queda al fondo. Solo funciona en elementos con pocisiones <em>absolute</em>, <em>relative</em> o <em>fixed</em>.</p></dd>
                 </ul>
         </article>
         <article>
+            <main>
             <div id="actname" class="instruction">
                 <t id="activity">Activity</t>
             </div>
@@ -51,10 +47,33 @@
                 <t id="instruction">Instructions</t>
             </div>
             <div id="info" class="vanish">
-                Match the image with the description.
+                Order the numbers from highest to lowest... please. Do not, <strong>Do not stack</strong> the numbers!
             </div>
-
+            
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="/Lab6/media/75.png" id="drag1" alt="75" draggable="true" ondragstart="drag(event)"></div>
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="/Lab6/media/98.png" id="drag2" alt="98" draggable="true" ondragstart="drag(event)"></div>
+            <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="/Lab6/media/13.png" id="drag3" alt="13" draggable="true" ondragstart="drag(event)"></div>
+            
+            <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="/Lab6/media/83.png" id="drag4" alt="83" draggable="true" ondragstart="drag(event)"></div>
+                
+            <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="/Lab6/media/60.png" id="drag5" alt="60" draggable="true" ondragstart="drag(event)"></div>
+                
+            <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                
+            </main>
+            <button class="button" id="enter">reset</button>
         </article>
+        <br/>
+        <article>
+    
+            <h2>Referencias:</h2>
+            <a href="https://www.w3schools.com/cssref/pr_pos_z-index.asp">https://www.w3schools.com/cssref/pr_pos_z-index.asp</a>
+            <a href="https://www.w3schools.com/cssref/pr_class_visibility.asp">https://www.w3schools.com/cssref/pr_class_visibility.asp</a>
+            <a href="https://www.w3schools.com/cssref/pr_class_position.asp">https://www.w3schools.com/cssref/pr_class_position.asp</a>
+        
+        </article>
+        
       <script type = "text/javascript" src = "/Lab6/js/script.js"></script>
     </body>
+    
 </html>
