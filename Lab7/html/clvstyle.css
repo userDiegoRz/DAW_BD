@@ -1,0 +1,59 @@
+div.top-bar {
+    background-color: lightcyan;
+    opacity: 0.9;
+}
+
+#background1 {
+    background-color: #3ED2B8;
+    border: 3pt solid #00C4A1;
+}
+
+#mainfont {
+    font-family: "Amatic SC";
+    font-size: x-large;
+}
+#clv {
+    font-family: "Amatic SC";
+    color: #FF5B5B;
+    font-size: x-large;
+}
+#background2 {
+    padding: 3pt;
+    background-color: #FE8383;
+    opacity: 0.9;
+    border: 3pt solid #FF5B5B;
+}
+
+li a {
+    color: #000;
+    font-family: "Amatic SC";
+    font-size: large;
+    font: bold;
+}
+
+li a:hover {
+    color: #33AF28;
+}
+
+body {
+    background-color: #C3F0BF;
+}
+
+.orbit-caption {
+    color: RED;
+    background-color: lightgray;
+    opacity: 0.5;
+}
+
+button.orbit-next:hover {
+    background-color: #00C4A1;
+    opacity: 0.4;
+    border: 3pt solid #3ED2B8;
+}
+button.orbit-previous:hover {
+    background-color: #FF5B5B;
+    opacity: 0.4;
+    border: 3pt solid #FE8383;
+}
+
+
