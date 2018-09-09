@@ -1,0 +1,144 @@
+<html>
+   <body>
+        
+       <h2 class="center card-panel">Ejercicios de PHP</h2>
+       
+       <div class="container">
+           <div class="row">
+           <div class="col s6 m6 l6"><h3>Caso de prueba 1:</h3><?php print_array($test_1) ?></div>
+            <div class="col s6 m6 l6"><h3>Caso de prueba 2:</h3><?php print_array($test_2) ?></div>
+           </div>           
+       </div>
+       <br/>
+       <div class="container">
+            <div class="card">
+                <div class="card-content">
+                  <h5>Promedioss</h5>
+                    <p>Al sumar todos los números de un arreglo y dividir entre la cantidad de localidades, se obtenrdá el promedio.</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#test1">Caso 1</a></li>
+                    <li class="tab"><a href="#test2">Caso 2</a></li>
+                  </ul>
+                </div>
+                <div class="card-content cyan lighten-6">
+                  <div id="test1"><?php echo 'Prom = '.media($test_1)?></div>
+                  <div id="test2"><?php echo 'Prom = '.media($test_2)?>  </div>
+                </div>
+              </div>
+       </div>
+       
+       <div class="container">
+            <div class="card">
+                <div class="card-content">
+                  <h5>Medianas</h5>
+                    <p>Al ordenar de menor a mayor, la mediana es el número de enmedio del arreglo.</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#test3">Caso 1</a></li>
+                    <li class="tab"><a href="#test4">Caso 2</a></li>
+                  </ul>
+                </div>
+                <div class="card-content cyan lighten-8">
+                  <div id="test3"><?php echo 'Mediana = '.mediana($test_1)?></div>
+                  <div id="test4"><?php echo 'Mediana = '.mediana($test_2)?></div>
+                </div>
+              </div>
+       </div>
+       
+       <div class="container">
+            <div class="card">
+                <div class="card-content">
+                  <h5>Listas</h5>
+                    <p>Se despliega de manera ordenada el arreglo y sus datos en forma de lista.</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#test5">Caso 1</a></li>
+                    <li class="tab"><a href="#test6">Caso 2</a></li>
+                  </ul>
+                </div>
+                <div class="card-content cyan lighten-6">
+                  <div id="test5"><?php echo lista($test_1)?></div>
+                  <div id="test6"><?php echo lista($test_2)?></div>
+                </div>
+              </div>
+       </div>
+       
+       <div class="container">
+            <div class="card">
+                <div class="card-content">
+                  <h5>Potencias</h5>
+                    <p>Despliega una tabla con el cuadrado y el cubo de 1 hasta <i>n</i> número </p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#test7">Caso 1</a></li>
+                    <li class="tab"><a href="#test8">Caso 2</a></li>
+                  </ul>
+                </div>
+                <div class="card-content cyan lighten-6">
+                  <div id="test7"><table class="responsive-table highlight"><?php echo potencias(5)?></table></div>
+                  <div id="test8"><table class="responsive-table highlight"><?php echo potencias(7)?></table></div>
+                </div>
+              </div>
+       </div>       
+       
+       <div class="container">
+            <div class="card">
+                <div class="card-content">
+                  <h5>Figuras Geométricas</h5>
+                    <p>Calcula área y volumen con funciones recursivas </p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a href="#test9">Área círculo radio 12 cm</a></li>
+                    <li class="tab"><a class="active" href="#test10">Área esfera radio 4 cm</a></li>
+                    <li class="tab"><a href="#test11">Volumen esfera radio 7 cm</a></li>
+                  </ul>
+                </div>
+                <div class="card-content cyan lighten-6">
+                  <div id="test9"><?php echo '<strong>A = </strong>'.area_circulo(5).' cm^2';?></div>
+                <div id="test10"><?php echo '<strong>A = </strong>'.area_esfera(4).' cm^2'?></div>
+                  <div id="test11"><?php echo '<strong>V = </strong>'.volumen_esfera(7).' cm^3'?></div>
+                
+                </div>
+              </div>
+       </div> 
+          
+       <h2 class="center">Preguntas PHP</h2>
+       
+       <div class="container red">
+       
+           
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">toc</i>¿Qué hace la función <code> phpinfo()</code>? Describe y discute 3 datos que llamen tu atención.</div>
+      <div class="collapsible-body"><span>La función <code>phpinfo()</code> despliega información de la configuración de <strong>PHP</strong>. Me llama la atención la versión de Apache, que indica también las versiones de PHP y openSSL. Además, el dato de <i>HTTP_USER_AGENT</i> dice a partir de qué versiones de navegador es compatible el servidor. Por último, me llama la atención que se cita a los autores, algo que los menús <code>info</code> no acostumbran.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">toc</i>¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?</div>
+      <div class="collapsible-body"><span>Cambiar la seguridad. La principal diferencia entre un ambiente de producción y uno de prueba es la seguridad, por lo que habría quee restringir el acceso para los usuarios autorizados y limitar el control de los administradores.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">toc</i>¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica.</div>
+      <div class="collapsible-body"><span>El código es generado por un servidor que le envía el archivo con únicamente código HTML. PHP contiene funciones que "hacen algo" y posteriormente envían la información ya procesada al usuario. Estas funciones se ejecutan en el servidor, no en el lado del cliente.</span></div>
+    </li>
+  </ul>
+        
+           
+       </div>
+       
+       <h2 class="center">Bibliografía</h2>
+       
+       <div class="container align-center">
+            <ul>
+              <li>http://php.net/manual/es/function.phpinfo.php</li>
+              <li>http://php.net/manual/en/intro-whatis.php</li><li>http://php.net/manual/en/errorfunc.configuration.php#ini.track-errors</li><li>https://documentation.progress.com/output/ua/OpenEdge_latest/index.html#page/pasoe-admin/development-servers-compared-to-production-serve.html</li>
+            </ul>
+       </div>
+    <script type="text/javascript" src="materialize.min.js"></script>
+    </body>
+</html>
