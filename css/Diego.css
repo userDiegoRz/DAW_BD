@@ -6,3 +6,24 @@ body {
     border: 2px groove pink;
 }
 
+.formulario {
+    padding: 6%;
+    border: 2px groove #0CC0DD;
+}
+
+.material-icons {
+    padding: 3%;
+}
+
+.material-icons:hover + .notes {
+    visibility: visible;
+}
+
+.notes {
+    position: inherit;
+    visibility: hidden;
+    height: 30px;
+    width: 200px;
+    border-bottom: 2px solid black;
+}
+
