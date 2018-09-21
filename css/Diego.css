@@ -27,3 +27,9 @@ body {
     border-bottom: 2px solid black;
 }
 
+.linked {
+    padding: 5%;
+    margin: 5%
+    align-content: center;
+}
+

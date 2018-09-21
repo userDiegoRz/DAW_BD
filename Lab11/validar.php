@@ -1,5 +1,10 @@
 <?php
     
+    // define variables and set to empty values
+    $usuario = $clave1 = $clave2 = "";
+
+
+
     if (isset($_POST["usuario"])) {
         $_POST["usuario"] = htmlspecialchars($_POST["usuario"]);
     }
@@ -30,7 +35,7 @@
         include("_footer.html");
     }
         
-    $usuario = $clave1 = $clave2 = "";
+    
         
         
 
