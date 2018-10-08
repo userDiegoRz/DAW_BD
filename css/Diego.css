@@ -29,7 +29,9 @@ body {
 
 .linked {
     padding: 5%;
-    margin: 5%
-    align-content: center;
+    margin: 5%;
 }
 
+.portrait {
+    resize: inherit;
+}
