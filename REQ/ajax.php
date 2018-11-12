@@ -29,10 +29,9 @@ if ($_POST['key'] == 'getRowData') {
 							<td>'.$data["id"].'</td>
 							<td id="country_'.$data["id"].'">'.$data["countryName"].'</td>
 							<td>
-								<input type="button" onclick="viewORedit('.$data["id"].',\'edit\')" value="Edit" class="btn btn-primary">
-                                <input type="button" onclick="viewORedit('.$data["id"].',\'view\')" value="View" class="btn btn-primary">
-								<input type="button" value="View" class="btn">
-								<input type="button" value="Delete" class="btn btn-danger">
+								<input type="button" onclick="viewORedit('.$data["id"].', \'edit\')" value="Edit" class="btn btn-primary">
+								<input type="button" onclick="viewORedit('.$data["id"].', \'view\')" value="View" class="btn">
+								<input type="button" onclick="deleteRow('.$data["id"].')" value="Delete" class="btn btn-danger">
 							</td>
 						</tr>
 					';
@@ -42,10 +41,16 @@ if ($_POST['key'] == 'getRowData') {
 				exit('reachedMax');
 		}
 
+		$rowID = $conn->real_escape_string($_POST['rowID']);
+
+		if ($_POST['key'] == 'deleteRow') {
+			$conn->query("DELETE FROM country WHERE id='$rowID'");
+			exit('The Row Has Been Deleted!');
+		}
+
 		$name = $conn->real_escape_string($_POST['name']);
 		$shortDesc = $conn->real_escape_string($_POST['shortDesc']);
 		$longDesc = $conn->real_escape_string($_POST['longDesc']);
-		$rowID = $conn->real_escape_string($_POST['rowID']);
 
 		if ($_POST['key'] == 'updateRow') {
 			$conn->query("UPDATE country SET countryName='$name', shortDesc='$shortDesc', longDesc='$longDesc' WHERE id='$rowID'");

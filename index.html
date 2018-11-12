@@ -18,13 +18,24 @@
                     </div>
 
                     <div class="modal-body">
-                        <input type="text" class="form-control" placeholder="Country Name..." id="countryName"><br>
-                        <textarea class="form-control" id="shortDesc" placeholder="Short Country Description"></textarea><br>
-                        <textarea class="form-control" id="longDesc" placeholder="Long Country Description"></textarea><br>
-                        <input type="hidden" id="editRowID" value="0">
+                        <div id="editContent">
+                            <input type="text" class="form-control" placeholder="Country Name..." id="countryName"><br>
+                            <textarea class="form-control" id="shortDesc" placeholder="Short Country Description"></textarea><br>
+                            <textarea class="form-control" id="longDesc" placeholder="Long Country Description"></textarea><br>
+                            <input type="hidden" id="editRowID" value="0">
+                        </div>
+
+                        <div id="showContent" style="display:none;">
+                            <h3>Short Description</h3>
+                            <div id="shortDescView"></div>
+                            <hr>
+                            <h3>Long Description</h3>
+                            <div id="longDescView" style="overflow-y: scroll; height: 300px;"></div>
+                        </div>
                     </div>
 
                     <div class="modal-footer">
+                        <input type="button" class="btn btn-primary" data-dismiss="modal" value="Close" id="closeBtn" style="display: none;">
                         <input type="button" id="manageBtn" onclick="manageData('addNew')" value="Save" class="btn btn-success">
                     </div>
                 </div>
@@ -55,22 +66,47 @@
     </div>
 
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
     <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="js/dataTables.bootstrap.min.js" type="text/javascript"></script>
-    
     <script type="text/javascript">
         $(document).ready(function() {
             $("#addNew").on('click', function () {
                $("#tableManager").modal('show');
             });
 
+            $("#tableManager").on('hidden.bs.modal', function () {
+               $("#showContent").fadeOut();
+               $("#editContent").fadeIn();
+               $("#editRowID").val(0);
+               $("#longDesc").val("");
+               $("#shortDesc").val("");
+               $("#countryName").val("");
+               $("#closeBtn").fadeOut();
+               $("#manageBtn").attr('value', 'Add New').attr('onclick', "manageData('addNew')").fadeIn();
+            });
+
             getExistingData(0, 50);
         });
 
-        function edit(rowID) {
+        function deleteRow(rowID) {
+            if (confirm('Are you sure??')) {
+                $.ajax({
+                    url: 'ajax.php',
+                    method: 'POST',
+                    dataType: 'text',
+                    data: {
+                        key: 'deleteRow',
+                        rowID: rowID
+                    }, success: function (response) {
+                        $("#country_"+rowID).parent().remove();
+                        alert(response);
+                    }
+                });
+            }
+        }
+
+        function viewORedit(rowID, type) {
             $.ajax({
                 url: 'ajax.php',
                 method: 'POST',
@@ -79,12 +115,26 @@
                     key: 'getRowData',
                     rowID: rowID
                 }, success: function (response) {
-                    $("#editRowID").val(rowID);
-                    $("#countryName").val(response.countryName);
-                    $("#shortDesc").val(response.shortDesc);
-                    $("#longDesc").val(response.longDesc);
+                    if (type == "view") {
+                        $("#showContent").fadeIn();
+                        $("#editContent").fadeOut();
+                        $("#longDescView").html(response.longDesc);
+                        $("#shortDescView").html(response.shortDesc);
+                        $("#manageBtn").fadeOut();
+                        $("#closeBtn").fadeIn();
+                    } else {
+                        $("#editContent").fadeIn();
+                        $("#editRowID").val(rowID);
+                        $("#showContent").fadeOut();
+                        $("#longDesc").val(response.longDesc);
+                        $("#shortDesc").val(response.shortDesc);
+                        $("#countryName").val(response.countryName);
+                        $("#closeBtn").fadeOut();
+                        $("#manageBtn").attr('value', 'Save Changes').attr('onclick', "manageData('updateRow')");
+                    }
+
+                    $(".modal-title").html(response.countryName);
                     $("#tableManager").modal('show');
-                    $("#manageBtn").attr('value', 'Save Changes').attr('onclick', "manageData('updateRow')");
                 }
             });
         }
@@ -151,15 +201,6 @@
 
             return true;
         }
-
-
-
-
-
-
-
-
-
     </script>
 </body>
 </html>
