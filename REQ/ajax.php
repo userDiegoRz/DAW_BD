@@ -3,7 +3,7 @@
 
 		$conn = new mysqli('localhost', 'root', '', 'data_manager');
         
-if ($_POST['key'] == 'getRowData') {
+        if ($_POST['key'] == 'getRowData') {
 			$rowID = $conn->real_escape_string($_POST['rowID']);
 			$sql = $conn->query("SELECT countryName, shortDesc, longDesc FROM country WHERE id='$rowID'");
 			$data = $sql->fetch_array();
